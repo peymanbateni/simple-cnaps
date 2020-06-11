@@ -1,6 +1,6 @@
 # Improved Few-Shot Visual Classification
 
-This directory contains the code for the paper, "Improved Few-Shot Visual Classification", which has been accepted and will be published at CVPR 2020. For a paper copy of the paper, please visit https://arxiv.org/pdf/1912.03432.pdf.
+This directory contains the code for the paper, "Improved Few-Shot Visual Classification", which has been published at IEEE CVPR 2020. For a pdf copy of the paper, please visit https://arxiv.org/pdf/1912.03432.pdf.
 
 This code base builds upon the original source code for CNAPS authored by John Bronskill, Jonathan Gordon, James Reqeima, Sebastian Nowozin, and Richard E. Turner. As our code, proposing Simple CNAPS, extends the original code, we've included the corresponding license for the original source code. Furthermore, we've explicitly labelled our addition to CNAPS, using the commenting scheme """SCM: ...""" (standing for Simple CNAPS Modification) to denote our changes/extensions. To this end, unless denoted by such comments, all other code either belongs to the original CNAPS repository or contains rudimentary/semantic changes to the original course code.
 
