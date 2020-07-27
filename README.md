@@ -98,7 +98,7 @@ To train and test Simple CNAPs on Meta-Dataset:
 | Overall Average Accuracy  | 72.2±0.8 | 71.2±0.8           | 66.5±0.8      | 65.9±0.8       |
 
 
-## Method Clarrification - Use of 1/2 Coefficient on the Mahalanobis Distance
+## Method Clarification - Use of 1/2 Coefficient on the Mahalanobis Distance
 
 The 1/2 coefficient used in Equation 2, namely the one-half squared Mahalanobis distance, provides correpondence to Gaussian Mixutre Models, but is widely believed to be of little significance as it corresponds to scaling vectors by a factor of 2. This scaling is naturally possible through a feature extractor and it was believed to not have a significant impact on the performance of the model. However, as we observed post-publication, it has a very small but nevertheless noticable impact as the use of the identity matrix in our regularization scheme breaks the equivalency previously believed. To this end, we provided a comparison in performance with respect to the presence of the 1/2 coefficient, and have updated the code to NOT use the coefficient as better performance is observed there. As shown, although overall performance changes are statistically insignificant, on certain specific datasets such as ILSVRC and VGG Flower, the difference is noticable. Note that this effect is primarily significant during training and at test time, either configuration achieves the same performance when used with the same checkpoints.
 
