@@ -100,9 +100,9 @@ To train and test Simple CNAPs on Meta-Dataset:
 ## Mini/Tiered ImageNet Installations & Usage
 In order to re-create these experiments, you need to:
 
-1. First clone https://github.com/yaoyao-liu/mini-imagenet-tools, the mini-imagenet tools package used for generating tasks, and https://github.com/yaoyao-liu/tiered-imagenet-tools, the respective tiered-imagenet tools package under /src. Although theoretically this should sufficient, there may be errors arising from hard coded file paths (3 to 4 of which was present at the time of creating our set-up, although they seem to have been resolved since) which you can easily fix.
+1. First clone https://github.com/yaoyao-liu/mini-imagenet-tools, the mini-imagenet tools package used for generating tasks, and https://github.com/yaoyao-liu/tiered-imagenet-tools, the respective tiered-imagenet tools package under ```/src```. Although theoretically this should sufficient, there may be errors arising from hard coded file paths (3 to 4 of which was present at the time of creating our set-up, although they seem to have been resolved since) which you can easily fix.
 
-2. Once the setup is complete, use run_simple_cnaps_mt.py to run mini\tiered-imagenet experiments:
+2. Once the setup is complete, use ```run_simple_cnaps_mt.py``` to run mini\tiered-imagenet experiments:
 
 For Simple CNAPS:
     
