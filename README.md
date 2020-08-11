@@ -18,7 +18,7 @@ The GPU requirements for Simple CNAPS are:
 * 1 GPU with 16GB or more memory for training Simple CNAPS
 We recommend the same settings for testing.
 
-## Installation
+## Meta-Dataset Installation
 Our installation process is the same as CNAPS:
 1. Clone or download this repository.
 2. Configure Meta-Dataset:
@@ -36,7 +36,7 @@ Our installation process is the same as CNAPS:
     * Change to the ```simple-cnaps/src``` directory in the repository.
     * Run: ```python prepare_extra_datasets.py```
 
-## Usage
+## Meta-Dataset Usage
 To train and test Simple CNAPs on Meta-Dataset:
 
 1. First run the following three commands:
@@ -97,6 +97,22 @@ To train and test Simple CNAPs on Meta-Dataset:
 | Out-of-Domain Average Accuracy  | 69.7±0.8 | 67.6±0.8           | 61.5±0.8      | 59.8±0.8       |
 | Overall Average Accuracy  | 72.2±0.8 | 71.2±0.8           | 66.5±0.8      | 65.9±0.8       |
 
+## Mini/Tiered ImageNet Installations & Usage
+In order to re-create these experiments, you need to:
+
+1. First clone https://github.com/yaoyao-liu/mini-imagenet-tools, the mini-imagenet tools package used for generating tasks, and https://github.com/yaoyao-liu/tiered-imagenet-tools, the respective tiered-imagenet tools package under /src. Although theoretically this should sufficient, there may be errors arising from hard coded file paths (3 to 4 of which was present at the time of creating our set-up, although they seem to have been resolved since) which you can easily fix.
+
+2. Once the setup is complete, use run_simple_cnaps_mt.py to run mini\tiered-imagenet experiments:
+
+For Simple CNAPS:
+    
+    ```cd src; python run_simple_cnaps_mt.py --dataset <choose either mini or tiered> --feature_adaptation film --checkpoint_dir <address of the directory where you want to save the checkpoints>```
+    
+For Simple AR-CNAPS:
+    
+    ```cd src; python run_simple_cnaps_mt.py --dataset <choose either mini or tiered> --feature_adaptation film+ar --checkpoint_dir <address of the directory where you want to save the checkpoints>```
+    
+**Note that as we emphasize this in the main paper, CNAPS-based models including Simple CNAPS have a natural advantage on these benchmarks due to the pre-trianing of the feature extractor on the Meta-Dataset split of ImageNet.
 
 ## Method Clarification - Use of 1/2 Coefficient on the Mahalanobis Distance
 
