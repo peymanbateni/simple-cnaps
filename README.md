@@ -142,12 +142,11 @@ The 1/2 coefficient used in Equation 2, namely the one-half squared Mahalanobis 
 
 ## Citing this repository/paper
 ```
-@misc{bateni2019improved,
-    title={Improved Few-Shot Visual Classification},
-    author={Peyman Bateni and Raghav Goyal and Vaden Masrani and Frank Wood and Leonid Sigal},
-    year={2019},
-    eprint={1912.03432},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+@InProceedings{Bateni_2020_CVPR,
+author = {Bateni, Peyman and Goyal, Raghav and Masrani, Vaden and Wood, Frank and Sigal, Leonid},
+title = {Improved Few-Shot Visual Classification},
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2020}
 }
 ```
