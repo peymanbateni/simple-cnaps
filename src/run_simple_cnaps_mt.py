@@ -50,7 +50,6 @@ class Learner:
         self.accuracy_fn = aggregate_accuracy
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.args.learning_rate)
         self.optimizer.zero_grad()
-        self.validation_accuracies = ValidationAccuracies(self.validation_set)
 
     def init_model(self):
         use_two_gpus = self.use_two_gpus()
