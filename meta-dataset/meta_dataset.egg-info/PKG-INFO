@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: meta-dataset
+Version: 0.2.0
+Summary: A benchmark for few-shot classification.
+Home-page: UNKNOWN
+Author: Google LLC
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7, <3.10

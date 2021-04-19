@@ -1,0 +1,9 @@
+absl-py >= 0.7
+gin-config>=0.1.2
+numpy>=1.13.3
+scipy>=1.0.0
+six >= 1.10
+tensorflow-gpu
+sklearn
+tensorflow_probability <= 0.7
+tf-models-official

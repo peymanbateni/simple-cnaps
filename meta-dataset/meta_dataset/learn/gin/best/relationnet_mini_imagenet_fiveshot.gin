@@ -1,0 +1,7 @@
+include 'meta_dataset/learn/gin/setups/mini_imagenet.gin'
+include 'meta_dataset/learn/gin/learners/relationnet_config.gin'
+
+## Hyperparameters used to train the best model
+Trainer.checkpoint_to_restore = ''
+Trainer.pretrained_source = 'scratch'
+weight_decay = 1e-6

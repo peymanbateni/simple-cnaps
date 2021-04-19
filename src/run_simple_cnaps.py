@@ -36,7 +36,8 @@ class Learner:
         self.model = self.init_model()
         self.train_set, self.validation_set, self.test_set = self.init_data()
         self.metadataset = MetaDatasetReader(self.args.data_path, self.args.mode, self.train_set, self.validation_set,
-                                             self.test_set)
+                                             self.test_set, self.args.max_way_train, self.args.max_way_test,
+                                             self.args.max_support_train, self.args.max_support_test)
         self.loss = loss
         self.accuracy_fn = aggregate_accuracy
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.args.learning_rate)
@@ -80,7 +81,13 @@ class Learner:
         parser.add_argument("--test_model_path", "-m", default=None, help="Path to model to load and test.")
         parser.add_argument("--feature_adaptation", choices=["no_adaptation", "film", "film+ar"], default="film+ar",
                             help="Method to adapt feature extractor parameters.")
-
+        parser.add_argument("--max_way_train", type=int, default=40,
+                            help="Maximum way of meta-dataset meta-train task.")
+        parser.add_argument("--max_way_test", type=int, default=50, help="Maximum way of meta-dataset meta-test task.")
+        parser.add_argument("--max_support_train", type=int, default=400,
+                            help="Maximum support set size of meta-dataset meta-train task.")
+        parser.add_argument("--max_support_test", type=int, default=500,
+                            help="Maximum support set size of meta-dataset meta-test task.")
         args = parser.parse_args()
 
         return args
@@ -95,7 +102,7 @@ class Learner:
                 total_iterations = NUM_TRAIN_TASKS
                 for iteration in range(total_iterations):
                     torch.set_grad_enabled(True)
-                    task_dict = self.metadataset.get_train_task(session)
+                    task_dict = self.metadataset.get_train_task()
                     task_loss, task_accuracy = self.train_task(task_dict)
                     train_accuracies.append(task_accuracy)
                     losses.append(task_loss)
@@ -160,7 +167,7 @@ class Learner:
             for item in self.validation_set:
                 accuracies = []
                 for _ in range(NUM_VALIDATION_TASKS):
-                    task_dict = self.metadataset.get_validation_task(item, session)
+                    task_dict = self.metadataset.get_validation_task(item)
                     context_images, target_images, context_labels, target_labels = self.prepare_task(task_dict)
                     target_logits = self.model(context_images, context_labels, target_images)
                     accuracy = self.accuracy_fn(target_logits, target_labels)
@@ -184,7 +191,7 @@ class Learner:
             for item in self.test_set:
                 accuracies = []
                 for _ in range(NUM_TEST_TASKS):
-                    task_dict = self.metadataset.get_test_task(item, session)
+                    task_dict = self.metadataset.get_test_task(item)
                     context_images, target_images, context_labels, target_labels = self.prepare_task(task_dict)
                     target_logits = self.model(context_images, context_labels, target_images)
                     accuracy = self.accuracy_fn(target_logits, target_labels)
@@ -225,7 +232,7 @@ class Learner:
         return images[permutation], labels[permutation]
 
     def use_two_gpus(self):
-        use_two_gpus = False
+        use_two_gpus = True
         if self.args.feature_adaptation == "film+ar":
             use_two_gpus = True  # film+ar model does not fit on one GPU, so use model parallelism
         return use_two_gpus

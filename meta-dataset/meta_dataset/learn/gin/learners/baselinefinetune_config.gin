@@ -1,0 +1,8 @@
+include 'meta_dataset/learn/gin/learners/baseline_config.gin'
+Trainer.train_learner_class = @BaselineFinetuneLearner
+Trainer.eval_learner_class = @BaselineFinetuneLearner
+weight_decay = 1e-4
+BaselineFinetuneLearner.num_finetune_steps = 5
+BaselineFinetuneLearner.finetune_lr = 1e-4
+BaselineFinetuneLearner.finetune_all_layers = False
+BaselineFinetuneLearner.finetune_with_adam = False

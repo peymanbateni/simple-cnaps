@@ -1,0 +1,21 @@
+include 'meta_dataset/learn/gin/setups/all.gin'
+include 'meta_dataset/learn/gin/learners/maml_config.gin'
+
+# Backbone hypers.
+include 'meta_dataset/learn/gin/best_v2/pretrained_resnet.gin'
+
+# Model hypers. (new results)
+MAMLLearner.first_order = True
+MAMLLearner.alpha = 0.09915203576061224
+MAMLLearner.additional_evaluation_update_steps = 5
+MAMLLearner.num_update_steps = 10
+
+# Data hypers.
+DataConfig.image_height = 126
+
+# Training hypers (not needed for eval).
+Trainer.decay_learning_rate = True
+Trainer.decay_every = 10000
+Trainer.decay_rate = 0.8354967819706964
+Trainer.learning_rate = 0.00023702989294963628
+weight_decay = 0.00030572401935585053

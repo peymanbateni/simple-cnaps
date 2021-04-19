@@ -1,0 +1,12 @@
+include 'meta_dataset/learn/gin/setups/imagenet.gin'
+include 'meta_dataset/learn/gin/learners/learner_config.gin'
+Trainer.train_learner_class = @BaselineLearner
+Trainer.eval_learner_class = @PrototypicalNetworkLearner
+weight_decay = 1e-4
+BaselineLearner.knn_in_fc = False
+
+BaselineLearner.transductive_batch_norm = False
+BaselineLearner.backprop_through_moments = True
+
+PrototypicalNetworkLearner.transductive_batch_norm = False
+PrototypicalNetworkLearner.backprop_through_moments = True

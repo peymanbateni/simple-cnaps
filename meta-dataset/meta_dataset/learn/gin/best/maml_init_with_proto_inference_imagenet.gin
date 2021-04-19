@@ -1,0 +1,30 @@
+include 'meta_dataset/learn/gin/setups/imagenet.gin'
+include 'meta_dataset/learn/gin/learners/maml_init_with_proto_config.gin'
+
+# Backbone hypers.
+Learner.embedding_fn = @resnet
+
+Trainer.pretrained_source = 'scratch'
+Trainer.checkpoint_to_restore = ''
+
+# Model hypers.
+MAMLLearner.first_order = True
+MAMLLearner.alpha = 0.00577257710776957
+MAMLLearner.additional_evaluation_update_steps = 0
+MAMLLearner.num_update_steps = 1
+
+# Data hypers.
+DataConfig.image_height = 126
+
+# Training hypers (not needed for eval).
+Trainer.decay_learning_rate = True
+Trainer.decay_every = 500
+Trainer.decay_rate = 0.885662482266546
+Trainer.learning_rate = 0.00025036275525430426
+weight_decay = 0.003952085241872012
+
+# Baseline hypers (just for the record).
+BaselineLearner.cosine_logits_multiplier = 10
+BaselineLearner.use_weight_norm = True
+BaselineLearner.knn_distance = 'l2'
+BaselineLearner.cosine_classifier = True

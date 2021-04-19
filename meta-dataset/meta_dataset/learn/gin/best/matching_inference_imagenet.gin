@@ -1,0 +1,21 @@
+include 'meta_dataset/learn/gin/setups/imagenet.gin'
+include 'meta_dataset/learn/gin/learners/matching_config.gin'
+
+# Backbone hypers.
+include 'meta_dataset/learn/gin/best_v2/pretrained_resnet.gin'
+
+# Data hypers.
+DataConfig.image_height = 84
+
+# Training hypers (not needed for eval).
+Trainer.decay_learning_rate = True
+Trainer.decay_every = 10000
+Trainer.decay_rate = 0.9714872833376629
+Trainer.learning_rate = 0.002670412664551181
+weight_decay = 0.000013646011503835137
+
+# Baseline hypers (just for the record).
+BaselineLearner.cosine_logits_multiplier = 1
+BaselineLearner.use_weight_norm = True
+BaselineLearner.knn_distance = 'cosine'
+BaselineLearner.cosine_classifier = False

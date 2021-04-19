@@ -1,0 +1,13 @@
+include 'meta_dataset/learn/gin/setups/imagenet.gin'
+include 'meta_dataset/learn/gin/learners/learner_config.gin'
+Trainer.train_learner_class = @BaselineLearner
+Trainer.eval_learner_class = @MatchingNetworkLearner
+weight_decay = 1e-4
+BaselineLearner.knn_in_fc = False
+MatchingNetworkLearner.exact_cosine_distance = False
+
+BaselineLearner.transductive_batch_norm = False
+BaselineLearner.backprop_through_moments = True
+
+MatchingNetworkLearner.transductive_batch_norm = False
+MatchingNetworkLearner.backprop_through_moments = True

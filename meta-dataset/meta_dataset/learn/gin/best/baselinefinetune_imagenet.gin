@@ -1,0 +1,23 @@
+include 'meta_dataset/learn/gin/setups/imagenet.gin'
+include 'meta_dataset/learn/gin/learners/baselinefinetune_config.gin'
+
+# Backbone hypers.
+include 'meta_dataset/learn/gin/best_v2/pretrained_wide_resnet.gin'
+
+# Model hypers.
+BaselineLearner.cosine_classifier = False
+BaselineLearner.use_weight_norm = True
+BaselineLearner.cosine_logits_multiplier = 1
+BaselineFinetuneLearner.num_finetune_steps = 200
+BaselineFinetuneLearner.finetune_lr = 0.01
+BaselineFinetuneLearner.finetune_all_layers = True
+BaselineFinetuneLearner.finetune_with_adam = True
+
+# Data hypers.
+DataConfig.image_height = 84
+
+# Training hypers (not needed for eval).
+Trainer.decay_every = 5000
+Trainer.decay_rate = 0.5559080744371039
+Trainer.learning_rate = 0.0027015533546616804
+weight_decay = 0.00002266979856832968
