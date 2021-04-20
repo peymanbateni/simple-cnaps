@@ -37,7 +37,7 @@ class Learner:
         self.train_set, self.validation_set, self.test_set = self.init_data()
         self.metadataset = MetaDatasetReader(self.args.data_path, self.args.mode, self.train_set, self.validation_set,
                                              self.test_set, self.args.max_way_train, self.args.max_way_test,
-                                             self.args.max_support_train, self.args.max_support_test)
+                                             self.args.max_support_train, self.args.max_support_test, self.args.shuffle_dataset)
         self.loss = loss
         self.accuracy_fn = aggregate_accuracy
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.args.learning_rate)
@@ -70,7 +70,7 @@ class Learner:
         parser = argparse.ArgumentParser()
 
         parser.add_argument("--data_path", default="../datasets", help="Path to dataset records.")
-        parser.add_argument("--pretrained_resnet_path", default="../models/pretrained_resnet.pt.tar",
+        parser.add_argument("--pretrained_resnet_path", default="../model-checkpoints/pretrained_resnets/pretrained_resnet_meta_dataset.pt.tar",
                             help="Path to pretrained feature extractor model.")
         parser.add_argument("--mode", choices=["train", "test", "train_test"], default="train_test",
                             help="Whether to run training only, testing only, or both training and testing.")
@@ -88,6 +88,8 @@ class Learner:
                             help="Maximum support set size of meta-dataset meta-train task.")
         parser.add_argument("--max_support_test", type=int, default=500,
                             help="Maximum support set size of meta-dataset meta-test task.")
+        parser.add_argument("--shuffle_dataset", type=bool, default=True,
+                            help="As per default, shuffles images before task generation. Set False to re-create paper results, and True for leaderboard results.")
         args = parser.parse_args()
 
         return args

@@ -66,7 +66,7 @@ class Learner:
     def parse_command_line(self):
         parser = argparse.ArgumentParser()
 
-        parser.add_argument("--pretrained_resnet_path", default="../models/pretrained_resnet.pt.tar",
+        parser.add_argument("--pretrained_resnet_path", default="../model-checkpoints/pretrained_resnets/pretrained_resnet_mini_tiered_with_extra_classes.pt.tar",
                             help="Path to pretrained feature extractor model.")
         parser.add_argument("--mode", choices=["train", "test", "train_test"], default="train_test",
                             help="Whether to run training only, testing only, or both training and testing.")

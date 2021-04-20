@@ -15,8 +15,9 @@ class MetaDatasetReader:
     """
     Class that wraps the Meta-Dataset episode reader.
     """
-    def __init__(self, data_path, mode, train_set, validation_set, test_set, max_way_train, max_way_test, max_support_train, max_support_test):
+    def __init__(self, data_path, mode, train_set, validation_set, test_set, max_way_train, max_way_test, max_support_train, max_support_test, shuffle=True):
 
+        self.shuffle = shuffle
         self.data_path = data_path
         self.train_dataset_next_task = None
         self.validation_set_dict = {}
@@ -57,14 +58,23 @@ class MetaDatasetReader:
         if 'ilsvrc_2012' in items:
             use_dag_ontology_list[items.index('ilsvrc_2012')] = True
 
-        multi_source_pipeline = pipeline.make_multisource_episode_pipeline(
-            dataset_spec_list=dataset_specs,
-            use_dag_ontology_list=use_dag_ontology_list,
-            use_bilevel_ontology_list=use_bilevel_ontology_list,
-            split=split,
-            episode_descr_config=episode_description,
-            image_size=84,
-            shuffle_buffer_size=1000)
+        if self.shuffle:
+            multi_source_pipeline = pipeline.make_multisource_episode_pipeline(
+                dataset_spec_list=dataset_specs,
+                use_dag_ontology_list=use_dag_ontology_list,
+                use_bilevel_ontology_list=use_bilevel_ontology_list,
+                split=split,
+                episode_descr_config=episode_description,
+                image_size=84,
+                shuffle_buffer_size=1000)
+        else:
+            multi_source_pipeline = pipeline.make_multisource_episode_pipeline(
+                dataset_spec_list=dataset_specs,
+                use_dag_ontology_list=use_dag_ontology_list,
+                use_bilevel_ontology_list=use_bilevel_ontology_list,
+                split=split,
+                episode_descr_config=episode_description,
+                image_size=84)
 
         iterator = multi_source_pipeline.make_one_shot_iterator()
         return iterator.get_next()
@@ -82,14 +92,23 @@ class MetaDatasetReader:
         if 'ilsvrc_2012' in dataset_name:
             use_dag_ontology = True
 
-        single_source_pipeline = pipeline.make_one_source_episode_pipeline(
-            dataset_spec=dataset_spec,
-            use_dag_ontology=use_dag_ontology,
-            use_bilevel_ontology=use_bilevel_ontology,
-            split=split,
-            episode_descr_config=episode_description,
-            image_size=84,
-            shuffle_buffer_size=1000)
+        if self.shuffle:
+            single_source_pipeline = pipeline.make_one_source_episode_pipeline(
+                dataset_spec=dataset_spec,
+                use_dag_ontology=use_dag_ontology,
+                use_bilevel_ontology=use_bilevel_ontology,
+                split=split,
+                episode_descr_config=episode_description,
+                image_size=84,
+                shuffle_buffer_size=1000)
+        else:
+            single_source_pipeline = pipeline.make_one_source_episode_pipeline(
+                dataset_spec=dataset_spec,
+                use_dag_ontology=use_dag_ontology,
+                use_bilevel_ontology=use_bilevel_ontology,
+                split=split,
+                episode_descr_config=episode_description,
+                image_size=84)
 
         iterator = single_source_pipeline.make_one_shot_iterator()
         return iterator.get_next()
