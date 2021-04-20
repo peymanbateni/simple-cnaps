@@ -115,9 +115,9 @@ To train and test Simple CNAPs on Meta-Dataset:
 | CIFAR100                        | 60.9±1.1     | N/A           |
 | ---                             | ---          | ---           |
 | In-Domain Average Accuracy      | 74.6±0.8     | 71.6±0.8      |
-| Out-of-Domain Average Accuracy  | 65.8±0.9     | 47.9±1.1*     |
-| Overall Average Accuracy        | 71.2±0.8     | 66.9±0.9*     |
-* averages don't include performances on MNIST, CIFAR10 and CIFAR100
+| Out-of-Domain Average Accuracy  | 65.8±0.9     | 47.9±1.1```*```     |
+| Overall Average Accuracy        | 71.2±0.8     | 66.9±0.9```*```     |
+```*``` averages don't include performances on MNIST, CIFAR10 and CIFAR100
 
 ## Mini/Tiered ImageNet Installations & Usage
 In order to re-create these experiments, you need to:
