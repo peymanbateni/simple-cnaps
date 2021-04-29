@@ -2,11 +2,15 @@
 
 This directory contains the code for the paper, "Improved Few-Shot Visual Classification", which has been published at IEEE CVPR 2020. For a pdf copy of the paper, please visit IEEE CVF at https://openaccess.thecvf.com/content_CVPR_2020/html/Bateni_Improved_Few-Shot_Visual_Classification_CVPR_2020_paper.html or our ArXiv copy at https://arxiv.org/pdf/1912.03432.pdf.
 
+Global Meta-Dataset rank: https://github.com/google-research/meta-dataset#training-on-all-datasets
+
+Global mini-ImageNet rank:
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improved-few-shot-visual-classification/few-shot-image-classification-on-mini-2)](https://paperswithcode.com/sota/few-shot-image-classification-on-mini-2?p=improved-few-shot-visual-classification)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improved-few-shot-visual-classification/few-shot-image-classification-on-mini-3)](https://paperswithcode.com/sota/few-shot-image-classification-on-mini-3?p=improved-few-shot-visual-classification)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improved-few-shot-visual-classification/few-shot-image-classification-on-mini-12)](https://paperswithcode.com/sota/few-shot-image-classification-on-mini-12?p=improved-few-shot-visual-classification)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improved-few-shot-visual-classification/few-shot-image-classification-on-mini-13)](https://paperswithcode.com/sota/few-shot-image-classification-on-mini-13?p=improved-few-shot-visual-classification)
 
+Global tiered-ImageNet rank:
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improved-few-shot-visual-classification/few-shot-image-classification-on-tiered)](https://paperswithcode.com/sota/few-shot-image-classification-on-tiered?p=improved-few-shot-visual-classification)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improved-few-shot-visual-classification/few-shot-image-classification-on-tiered-1)](https://paperswithcode.com/sota/few-shot-image-classification-on-tiered-1?p=improved-few-shot-visual-classification)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/improved-few-shot-visual-classification/few-shot-image-classification-on-tiered-2)](https://paperswithcode.com/sota/few-shot-image-classification-on-tiered-2?p=improved-few-shot-visual-classification)
@@ -19,6 +23,7 @@ This code requires the following.
 * Python 3.5 or greater
 * PyTorch 1.0 or greater
 * TensorFlow 2.0 or greater
+
 You can use the ```requirements.txt``` file included to install dependencies for both Simple CNAPS and the accompanying source codes for Meta-Dataset, mini-ImageNet and tiered-ImageNet. To install dependencies, run ```pip install -r requirements.txt``.
 
 ## GPU Requirements
@@ -126,7 +131,7 @@ To train and test Simple CNAPs on Meta-Dataset:
 | ---                             | ---          | ---           |
 | In-Domain Average Accuracy      | 74.6±0.8     | 71.6±0.8      |
 | Out-of-Domain Average Accuracy  | 65.8±0.9     | 47.9±1.1*     |
-| Overall Average Accuracy        | 71.2±0.8     | 66.9±0.9*    |
+| Overall Average Accuracy        | 71.2±0.8     | 66.9±0.9*     |
 
 ```*``` averages don't include performances on MNIST, CIFAR10 and CIFAR100
 
