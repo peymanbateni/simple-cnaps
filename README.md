@@ -26,7 +26,7 @@ This code requires the following.
 * PyTorch 1.0 or greater
 * TensorFlow 2.0 or greater
 
-You can use the ```requirements.txt``` file included to install dependencies for both Simple CNAPS and the accompanying source codes for Meta-Dataset, mini-ImageNet and tiered-ImageNet. To install dependencies, run ```pip install -r requirements.txt``.
+You can use the ```requirements.txt``` file included to install dependencies for both Simple CNAPS and the accompanying source codes for Meta-Dataset, mini-ImageNet and tiered-ImageNet. To install dependencies, run ```pip install -r requirements.txt```.
 
 ## GPU Requirements
 The GPU requirements for Simple CNAPS are:
