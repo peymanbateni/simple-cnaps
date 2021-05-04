@@ -156,6 +156,7 @@ For Simple AR-CNAPS:
 pretrained_resnet_tiered_imagenet.pt.tar```. We additionally consider the case that additional non-test-set overlapping ImageNet classes are used to train our ResNet feature extractor in ```pretrained_resnet_mini_tiered_with_extra_classes.pt.tar```. We refer to this latter setup as "Feature Exctractor Trained (partially) on ImageNet", abbreviated as "FETI". Please visit the experimental section of http://128.84.4.27/abs/2006.12245 for additional details on this setup.
 
 **Updated results (with the new ResNet18 checkpoints - see explanation above) on mini-ImageNet**
+
 | Ways                            | 5-way        | 5-way           | 10-way    | 10-way    |
 | Shots                           | 1-shot       | 5-shot          | 1-shot    | 5-shot    |
 | ---                             | ---          | ---             | ---       | ---       |
@@ -163,6 +164,7 @@ pretrained_resnet_tiered_imagenet.pt.tar```. We additionally consider the case t
 | Simple CNAPS + FETI             | 77.4±0.8     | 90.3±0.4        | 63.5±0.6  | 83.1±0.4  |
 
 **Updated results (with the new ResNet18 checkpoints - see explanation above) on tiered-ImageNet**
+
 | Ways                            | 5-way        | 5-way           | 10-way    | 10-way    |
 | Shots                           | 1-shot       | 5-shot          | 1-shot    | 5-shot    |
 | ---                             | ---          | ---             | ---       | ---       |
