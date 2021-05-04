@@ -135,7 +135,7 @@ To train and test Simple CNAPs on Meta-Dataset:
 | Out-of-Domain Average Accuracy  | 65.8±0.9     | 47.9±1.1*     |
 | Overall Average Accuracy        | 71.2±0.8     | 66.9±0.9*     |
 
-```*``` averages don't include performances on MNIST, CIFAR10 and CIFAR100
+```*``` CNAPS averages don't include performances on MNIST, CIFAR10 and CIFAR100
 
 ## Mini/Tiered ImageNet Installations & Usage
 In order to re-create these experiments, you need to:
@@ -153,7 +153,21 @@ For Simple AR-CNAPS:
     ```cd src; python run_simple_cnaps_mt.py --dataset <choose either mini or tiered> --feature_adaptation film+ar --checkpoint_dir <address of the directory where you want to save the checkpoints> --pretrained_resnet_path <choose resnet pretrained checkpoint>```
     
 **Note that as we emphasized this in the main paper, CNAPS-based models including Simple CNAPS have a natural advantage on these benchmarks due to the pre-trianing of the feature extractor on the Meta-Dataset split of ImageNet. We alliviate this issue by re-training the ResNet feature extractor on the specific training splits of mini-ImageNet and tiered-ImageNet. These checkpoints have been provided under ```model-checkpoints/pretrained_resnets``` and are respectively ```pretrained_resnet_mini_imagenet.pt.tar``` and ```
-pretrained_resnet_tiered_imagenet.pt.tar```. We additionally consider the case that additional non-test-set overlapping ImageNet classes are used to train our ResNet feature extractor in ```pretrained_resnet_mini_tiered_with_extra_classes.pt.tar```. Please visit the experimental section of http://128.84.4.27/abs/2006.12245 for additional details on this setup.
+pretrained_resnet_tiered_imagenet.pt.tar```. We additionally consider the case that additional non-test-set overlapping ImageNet classes are used to train our ResNet feature extractor in ```pretrained_resnet_mini_tiered_with_extra_classes.pt.tar```. We refer to this latter setup as "Feature Exctractor Trained (partially) on ImageNet", abbreviated as "FETI". Please visit the experimental section of http://128.84.4.27/abs/2006.12245 for additional details on this setup.
+
+**Updated results (with the new ResNet18 checkpoints - see explanation above) on mini-ImageNet**
+| Ways                            | 5-way        | 5-way           | 10-way    | 10-way    |
+| Shots                           | 1-shot       | 5-shot          | 1-shot    | 5-shot    |
+| ---                             | ---          | ---             | ---       | ---       |
+| Simple CNAPS                    | 53.2±0.9     | 70.8±0.7        | 37.1±0.5  | 56.7±0.5  |
+| Simple CNAPS + FETI             | 77.4±0.8     | 90.3±0.4        | 63.5±0.6  | 83.1±0.4  |
+
+**Updated results (with the new ResNet18 checkpoints - see explanation above) on tiered-ImageNet**
+| Ways                            | 5-way        | 5-way           | 10-way    | 10-way    |
+| Shots                           | 1-shot       | 5-shot          | 1-shot    | 5-shot    |
+| ---                             | ---          | ---             | ---       | ---       |
+| Simple CNAPS                    | 63.0±1.0     | 80.0±0.8        | 48.1±0.7  | 70.2±0.6  |
+| Simple CNAPS + FETI             | 71.4±1.0     | 86.0±0.6        | 57.1±0.7  | 78.5±0.5  |
 
 ## Method Clarification - Use of 1/2 Coefficient on the Mahalanobis Distance
 
