@@ -157,16 +157,14 @@ pretrained_resnet_tiered_imagenet.pt.tar```. We additionally consider the case t
 
 **Updated results (with the new ResNet18 checkpoints - see explanation above) on mini-ImageNet**
 
-| Ways                            | 5-way        | 5-way           | 10-way    | 10-way    |
-| Shots                           | 1-shot       | 5-shot          | 1-shot    | 5-shot    |
+| Setup                           | 5-way 1-shot | 5-way 5-shot    | 10-way 1-shot    | 10-way 5-shot    |
 | ---                             | ---          | ---             | ---       | ---       |
 | Simple CNAPS                    | 53.2±0.9     | 70.8±0.7        | 37.1±0.5  | 56.7±0.5  |
 | Simple CNAPS + FETI             | 77.4±0.8     | 90.3±0.4        | 63.5±0.6  | 83.1±0.4  |
 
 **Updated results (with the new ResNet18 checkpoints - see explanation above) on tiered-ImageNet**
 
-| Ways                            | 5-way        | 5-way           | 10-way    | 10-way    |
-| Shots                           | 1-shot       | 5-shot          | 1-shot    | 5-shot    |
+| Setup                           | 5-way 1-shot | 5-way 5-shot    | 10-way 1-shot    | 10-way 5-shot    |
 | ---                             | ---          | ---             | ---       | ---       |
 | Simple CNAPS                    | 63.0±1.0     | 80.0±0.8        | 48.1±0.7  | 70.2±0.6  |
 | Simple CNAPS + FETI             | 71.4±1.0     | 86.0±0.6        | 57.1±0.7  | 78.5±0.5  |
