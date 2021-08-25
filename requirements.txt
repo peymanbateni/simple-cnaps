@@ -84,7 +84,7 @@ tensorboard-plugin-wit==1.8.0
 tensorflow==2.4.1
 tensorflow-datasets==4.2.0
 tensorflow-estimator==2.4.0
-tensorflow-gpu==2.4.1
+tensorflow-gpu==2.5.1
 tensorflow-hub==0.11.0
 tensorflow-metadata==0.29.0
 tensorflow-model-optimization==0.5.0
