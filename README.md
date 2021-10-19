@@ -1,5 +1,7 @@
 # Improved Few-Shot Visual Classification
 
+**This code base is an implicit fork of [https://github.com/plai-group/simple-cnaps](https://github.com/plai-group/simple-cnaps). Please refer to that repository for the most up-to-date code. We will try to sync that repository with the one here as much as possible, but there will be latencies as the PLAI-Group repository is directly maintained, and my personal copy here is not.
+
 This repository contains source codes for the following papers:
 
 - [Improved Few-Shot Visual Classification](https://openaccess.thecvf.com/content_CVPR_2020/html/Bateni_Improved_Few-Shot_Visual_Classification_CVPR_2020_paper.html) 
