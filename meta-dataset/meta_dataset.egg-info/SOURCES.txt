@@ -1,3 +1,5 @@
+AUTHORS
+LICENSE
 README.md
 setup.py
 meta_dataset/__init__.py
