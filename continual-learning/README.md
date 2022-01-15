@@ -1,4 +1,4 @@
-# Towards Better Few-Shot Object Recognition - Continual Learning
+# Beyond Simple Meta-Learning: Multi-Purpose Models for Multi-Domain, Active and Continual Few-Shot Learning - Continual Learning
 
 This directory contains the code for the continual learning experiments referenced in the paper, [Beyond Simple Meta-Learning: Multi-Purpose Models for Multi-Domain, Active and Continual Few-Shot Learning](https://arxiv.org/abs/2201.05151), which is currently under review at the IEEE TPAMI Special Issue on Learning with Fewer Labels in Computer Vision 2022. We will release a PDF copy of this paper by mid-October.
 
