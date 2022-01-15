@@ -40,16 +40,20 @@ We hope you have found our code base helpful! If you use this repository, please
 }
 
 @InProceedings{Bateni2020_TransductiveCNAPS,
-    author    = {Peyman Bateni and Jarred Barber and Jan{-}Willem van de Meent and Frank Wood},
-    title     = {Enhancing Few-Shot Image Classification with Unlabelled Examples},
+    author    = {Bateni, Peyman and Barber, Jarred and van de Meent, Jan-Willem and Wood, Frank},
+    title     = {Enhancing Few-Shot Image Classification With Unlabelled Examples},
     booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
     month     = {January},
     year      = {2022},
+    pages     = {2796-2805}
 }
 
-@article{Bateni2021_BetterFewShotObjectRecognition,
-    author    = {Peyman Bateni and Jarred Barber and Raghav Goyal and Vaden Masrani and Jan{-}Willem van de Meent and Leonid Sigal and Frank Wood},
-    title     = {Towards Better Few-Shot Object Recognition},
-    year      = {2021}
+@misc{Bateni2021_BeyondSimpleMetaLearning,
+    title={Beyond Simple Meta-Learning: Multi-Purpose Models for Multi-Domain, Active and Continual Few-Shot Learning}, 
+    author={Peyman Bateni and Jarred Barber and Raghav Goyal and Vaden Masrani and Jan-Willem van de Meent and Leonid Sigal and Frank Wood},
+    year={2022},
+    eprint={2201.05151},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
 }
 ```
