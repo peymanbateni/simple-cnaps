@@ -118,7 +118,7 @@ We hope you have found our code base helpful! If you use this repository, please
     year = {2020}
 }
 
-@InProceedings{Bateni2020_TransductiveCNAPS,
+@InProceedings{Bateni2022_TransductiveCNAPS,
     author    = {Bateni, Peyman and Barber, Jarred and van de Meent, Jan-Willem and Wood, Frank},
     title     = {Enhancing Few-Shot Image Classification With Unlabelled Examples},
     booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
@@ -127,7 +127,7 @@ We hope you have found our code base helpful! If you use this repository, please
     pages     = {2796-2805}
 }
 
-@misc{Bateni2021_BeyondSimpleMetaLearning,
+@misc{Bateni2022_BeyondSimpleMetaLearning,
     title={Beyond Simple Meta-Learning: Multi-Purpose Models for Multi-Domain, Active and Continual Few-Shot Learning}, 
     author={Peyman Bateni and Jarred Barber and Raghav Goyal and Vaden Masrani and Jan-Willem van de Meent and Leonid Sigal and Frank Wood},
     year={2022},
