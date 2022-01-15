@@ -12,7 +12,7 @@ This repository contains source codes for the following papers:
 
   @ IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2022
   
-- [Towards Better Few-Shot Object Recognition]() 
+- [Beyond Simple Meta-Learning: Multi-Purpose Models for Multi-Domain, Active and Continual Few-Shot Learning](https://arxiv.org/abs/2201.05151) 
   
   @ IEEE TPAMI Special Issue on Learning with Fewer Labels in Computer Vision, 2022 (in submission)
 
@@ -59,7 +59,7 @@ Global Tiered-ImageNet Rank (Transductive CNAPS):
 
 ## Active and Continual Learning
 
-We additionally evaluate both methods within the paradigms of "out of the box" active and continual learning. These settings were first proposed by Requeima et al., and studies how well few-shot classifiers, trained for few-shot learning, can be deployed for active and continual learning without any problem-specific finetuning or training. For additional details on our active and continual learning experiments and algorithms, please refer to our latest paper: [Towards Better Few-Shot Object Recognition](). For code and instructions to reproduce the experiments reported, please refer to the [active-learning](https://github.com/plai-group/simple-cnaps/tree/master/active-learning) and [continual-learning](https://github.com/plai-group/simple-cnaps/tree/master/continual-learning) folders.
+We additionally evaluate both methods within the paradigms of "out of the box" active and continual learning. These settings were first proposed by Requeima et al., and studies how well few-shot classifiers, trained for few-shot learning, can be deployed for active and continual learning without any problem-specific finetuning or training. For additional details on our active and continual learning experiments and algorithms, please refer to our latest paper: [Beyond Simple Meta-Learning: Multi-Purpose Models for Multi-Domain, Active and Continual Few-Shot Learning](https://arxiv.org/abs/2201.05151). For code and instructions to reproduce the experiments reported, please refer to the [active-learning](https://github.com/plai-group/simple-cnaps/tree/master/active-learning) and [continual-learning](https://github.com/plai-group/simple-cnaps/tree/master/continual-learning) folders.
 
 ## Meta-Dataset Results
 
@@ -128,11 +128,11 @@ We hope you have found our code base helpful! If you use this repository, please
 }
 
 @misc{Bateni2021_BeyondSimpleMetaLearning,
-      title={Beyond Simple Meta-Learning: Multi-Purpose Models for Multi-Domain, Active and Continual Few-Shot Learning}, 
-      author={Peyman Bateni and Jarred Barber and Raghav Goyal and Vaden Masrani and Jan-Willem van de Meent and Leonid Sigal and Frank Wood},
-      year={2022},
-      eprint={2201.05151},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+    title={Beyond Simple Meta-Learning: Multi-Purpose Models for Multi-Domain, Active and Continual Few-Shot Learning}, 
+    author={Peyman Bateni and Jarred Barber and Raghav Goyal and Vaden Masrani and Jan-Willem van de Meent and Leonid Sigal and Frank Wood},
+    year={2022},
+    eprint={2201.05151},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
 }
 ```
