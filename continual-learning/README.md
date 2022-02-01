@@ -68,3 +68,5 @@ We hope you have found our code base helpful! If you use this repository, please
     collection  = {Electronic Theses and Dissertations (ETDs) 2008+}
 }
 ```
+
+**If you would like to ask any questions or reach out regarding any of the papers, please email me directly at peyman.bateni@hotmail.com (my cs.ubc.ca email may have expired by the time you are emailing as I have graduated!).
