@@ -5,7 +5,10 @@
 This repository contains source codes for the following papers:
 
 - [Improved Few-Shot Visual Classification](https://openaccess.thecvf.com/content_CVPR_2020/html/Bateni_Improved_Few-Shot_Visual_Classification_CVPR_2020_paper.html) 
+
   @ IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2020
+  
+  ([Paper](https://openaccess.thecvf.com/content_CVPR_2020/html/Bateni_Improved_Few-Shot_Visual_Classification_CVPR_2020_paper.html), [ArXiv](https://arxiv.org/abs/2006.12245), [PapersWithCode](https://paperswithcode.com/paper/improved-few-shot-visual-classification), [Video](https://www.youtube.com/watch?v=qE2cJrOi2J0))
   
 - [Enhancing Few-Shot Image Classification with Unlabelled Examples](https://arxiv.org/abs/2006.12245) 
 
