@@ -14,13 +14,19 @@ This repository contains source codes for the following papers:
 
   @ IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2022
   
+  ([Paper](https://openaccess.thecvf.com/content/WACV2022/html/Bateni_Enhancing_Few-Shot_Image_Classification_With_Unlabelled_Examples_WACV_2022_paper.html), [ArXiv](https://arxiv.org/abs/2006.12245), [PapersWithCode](https://paperswithcode.com/paper/improving-few-shot-visual-classification-with), [Video](https://www.youtube.com/watch?v=ht8hckNHfSY))
+  
 - [Beyond Simple Meta-Learning: Multi-Purpose Models for Multi-Domain, Active and Continual Few-Shot Learning](https://arxiv.org/abs/2201.05151) 
   
   @ IEEE TPAMI Special Issue on Learning with Fewer Labels in Computer Vision, 2022 (in submission)
   
+  ([ArXiv](https://arxiv.org/abs/2006.12245), [PapersWithCode](https://paperswithcode.com/paper/beyond-simple-meta-learning-multi-purpose))
+  
 - [On Label-Efficient Computer Vision: Building Fast and Effective Few-Shot Image Classifiers](https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0402554) 
   
   @ UBC cIRcle Thesis Archives
+  
+  ([Thesis](https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0402554?o=0), [PapersWithCode](https://paperswithcode.com/paper/on-label-efficient-computer-vision-building), [Video](https://youtu.be/KJ7UVKpCddg))
 
 The code base has been authored by Peyman Bateni, Jarred Barber, Raghav Goyal, Vaden Masrani, Dr. Jan-Willemn van de Meent, Dr. Leonid Sigal and Dr. Frank Wood. The source codes build on the original code base for CNAPS authored by Dr. John Bronskill, Jonathan Gordon, James Reqeima, Dr. Sebastian Nowozin, and Dr. Richard E. Turner. We would like to thank them for their help, support and early sharing of their work. To see the original CNAPS repository, visit https://github.com/cambridge-mlg/cnaps.
 
