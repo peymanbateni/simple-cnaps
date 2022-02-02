@@ -24,7 +24,7 @@ This repository contains source codes for the following papers and thesis:
   
 - [On Label-Efficient Computer Vision: Building Fast and Effective Few-Shot Image Classifiers](https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0402554) 
   
-  @ UBC cIRcle Thesis Archives
+  @ UBC cIRcle Thesis Archives, 2021
   
   ([Thesis](https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0402554?o=0), [PapersWithCode](https://paperswithcode.com/paper/on-label-efficient-computer-vision-building), [Video](https://youtu.be/KJ7UVKpCddg))
 
