@@ -76,6 +76,7 @@ We additionally evaluate both methods within the paradigms of "out of the box" a
 ## Meta-Dataset Results
 
 | Dataset                         | Simple CNAPS | Simple CNAPS | Transductive CNAPS | Transductive CNAPS |
+| ---                             | ---          | ---          | ---                | ---                |
 | ```--shuffle_dataset False```   | False        | True         | False              | True               |
 | ---                             | ---          | ---          | ---                | ---                |
 | In-Domain Datasets              | ---          | ---          | ---                | ---                |
