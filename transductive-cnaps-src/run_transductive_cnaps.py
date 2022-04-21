@@ -154,7 +154,7 @@ class Learner:
                 self.test(self.checkpoint_path_validation, session, "train")
 
                 print("Evaluating with test mode max/min refinement steps.")
-                print("Max refinement steps (test): " + str(self.args.max_cluster_refinement_step_test))
+                print("Max refinement steps (test): " + str(self.args.max_cluster_refinement_steps_test))
                 print("Min refinement steps (test): " + str(self.args.min_cluster_refinement_steps_test))
                 self.test(self.checkpoint_path_final, session, "test")
                 self.test(self.checkpoint_path_validation, session, "test")
@@ -166,7 +166,7 @@ class Learner:
                 self.test(self.args.test_model_path, session, "train")
 
                 print("Evaluating with test mode max/min refinement steps.")
-                print("Max refinement steps (test): " + str(self.args.max_cluster_refinement_step_test))
+                print("Max refinement steps (test): " + str(self.args.max_cluster_refinement_steps_test))
                 print("Min refinement steps (test): " + str(self.args.min_cluster_refinement_steps_test))
                 self.test(self.args.test_model_path, session, "test")
 
