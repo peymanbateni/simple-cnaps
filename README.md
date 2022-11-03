@@ -77,8 +77,7 @@ We additionally evaluate both methods within the paradigms of "out of the box" a
 
 | Dataset                         | Simple CNAPS | Simple CNAPS | Transductive CNAPS | Transductive CNAPS |
 | ---                             | ---          | ---          | ---                | ---                |
-| ```--shuffle_dataset False```   | False        | True         | False              | True               |
-| ---                             | ---          | ---          | ---                | ---                |
+| ```--shuffle_dataset.```.       | False        | True         | False              | True               |
 | In-Domain Datasets              | ---          | ---          | ---                | ---                |
 | ILSVRC                          | 58.6±1.1     | 56.5±1.1     | 58.8±1.1           | 57.9±1.1           |
 | Omniglot                        | 91.7±0.6     | 91.9±0.6     | 93.9±0.4           | 94.3±0.4           |
