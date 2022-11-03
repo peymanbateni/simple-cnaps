@@ -31,7 +31,7 @@ idna==3.2
 imageio==2.9.0
 importlib-metadata==4.8.1
 importlib-resources==5.2.2
-joblib==1.0.1
+joblib==1.2.0
 kaggle==1.5.12
 keras==2.6.0
 Keras-Preprocessing==1.1.2
