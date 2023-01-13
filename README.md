@@ -18,7 +18,7 @@ This repository contains source codes for the following papers and thesis:
   
 - [Beyond Simple Meta-Learning: Multi-Purpose Models for Multi-Domain, Active and Continual Few-Shot Learning](https://arxiv.org/abs/2201.05151) 
   
-  @ IEEE TPAMI Special Issue on Learning with Fewer Labels in Computer Vision, 2022 (in submission)
+  @ Elsevier Neural Networks (Official Journal of the International Neural Network Society, European Neural Network Society & Japanese Neural Network Society), 2022 (in submission)
   
   ([ArXiv](https://arxiv.org/abs/2006.12245), [PapersWithCode](https://paperswithcode.com/paper/beyond-simple-meta-learning-multi-purpose))
   
